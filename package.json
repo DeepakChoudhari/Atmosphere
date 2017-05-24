@@ -4,15 +4,14 @@
   "description": "Angular-2 kickoff application",
   "main": "./src/app/index.js",
   "scripts": {
-    "start": "node_modules\\.bin\\tsc && concurrently \"tsc -w\" \"lite-server\" ",
-    "tsc": "tsc",
-    "tsc:w": "tsc -w",
+    "start": "node_modules\\.bin\\tsc -p .\\src && concurrently \"node_modules\\.bin\\tsc -w -p .\\src\" \"lite-server\" ",
+    "tsc": "node_modules\\.bin\\tsc -p .\\src",
+    "tsc:w": "node_modules\\.bin\\tsc -w",
     "lint": "tslint ./src/app/**/*.ts -t verbose",
     "lite": "lite-server",
     "typings": "typings",
     "postinstall": "typings install"
   },
-  "keywords": [],
   "author": "Deepak Choudhari",
   "license": "ISC",
   "dependencies": {
