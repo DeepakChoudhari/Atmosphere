@@ -8,4 +8,8 @@ import { WeatherDataModel } from '../weatherDataModel'
 })
 export class WeatherWidget {
     @Input() weatherData: WeatherDataModel;
+
+    showMoreWeatherInfo() {
+        
+    }
 }
