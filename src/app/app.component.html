@@ -1,30 +1,3 @@
 <div class="container">
-    <div class="starter-template">
-        <div class="input-group input-group-lg">
-            <input [(ngModel)]="cityName" type="search" class="form-control" placeholder="Enter city and hit Enter...">
-            <span class="input-group-btn">
-                <button class="btn btn-default" type="submit" (click)="onSubmit()">
-                    <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-                </button>
-            </span>
-        </div>
-        
-        <div class="row">
-            <weather-widget *ngIf="weatherDataForDefaultCity1" 
-                            [weatherData]="weatherDataForDefaultCity1">
-            </weather-widget>
-
-            <weather-widget *ngIf="weatherDataForDefaultCity2" 
-                            [weatherData]="weatherDataForDefaultCity2">
-            </weather-widget>
-
-            <weather-widget *ngIf="weatherDataForDefaultCity3" 
-                            [weatherData]="weatherDataForDefaultCity3">
-            </weather-widget>
-        </div>
-
-        <div class="row"> <!-- If error ocurred while retrieving weather data -->
-
-        </div>
-    </div>
+    <router-outlet></router-outlet>
 </div>

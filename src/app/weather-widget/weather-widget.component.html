@@ -1,5 +1,5 @@
-<div class="col-md-4">
-    <h2>{{weatherData.name}}</h2>
+<div class="col-md-4" *ngIf="weatherData">
+    <h2>{{weatherData.name | uppercase }}</h2>
     <div>
         {{weatherData.region}}, {{weatherData.country}}
     </div>
