@@ -5,3 +5,4 @@ Atmosphere is an Angular 2.0 *single page application* that displays weather dat
 - [x] Components and Nested Components
 - [x] Custom Services (Providers)
 - [x] Angular Forms
+- [x] Observables and Reactive Extensions
