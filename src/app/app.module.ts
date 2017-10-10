@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule }   from '@angular/forms'
 import { RouterModule } from '@angular/router';
+import { HttpModule } from '@angular/http';
 
 import { WeatherDashboardComponent } from './weather-dashboard/weather-dashboard.component';
 import { AppComponent } from './app.component';
@@ -13,6 +14,7 @@ import { WeatherDetailsComponent } from "./weather-details/weather-details.compo
     imports: [ 
         BrowserModule, 
         FormsModule,
+        HttpModule,
         RouterModule.forRoot(
             [
                 /* Routes must be configured in the order of more specific to generic routes  */

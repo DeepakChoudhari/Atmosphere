@@ -25,8 +25,13 @@ export class WeatherDashboardComponent implements OnInit {
 
     ngOnInit() {
         /* Get weather data for 3 places as per configuration to display when the app is first loaded  */
-        this.weatherService.getWeatherInfo('Chicago').then(data => this.weatherDataForDefaultCity1 = data);
-        this.weatherService.getWeatherInfo('Boston').then(data => this.weatherDataForDefaultCity2 = data);
-        this.weatherService.getWeatherInfo('Houston').then(data => this.weatherDataForDefaultCity3 = data);
+        this.weatherService.getWeatherInfo('Chicago')
+        .subscribe(data => this.weatherDataForDefaultCity1 = data);
+
+        this.weatherService.getWeatherInfo('Boston')
+        .subscribe(data => this.weatherDataForDefaultCity2 = data);
+        
+        this.weatherService.getWeatherInfo('Bangalore,India')
+        .subscribe(data => this.weatherDataForDefaultCity3 = data);
     }
 }
